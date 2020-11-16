@@ -1,28 +1,33 @@
 package initPackage;
 
 public class instruction {
-	private byte firstByte;
-	private byte secondByte;
+	private String firstByte;
+	private String secondByte;
 	
-	public instruction(byte first_Byte, byte second_Byte) {
+	public instruction(String first_Byte, String second_Byte) {
 		this.firstByte = first_Byte;
 		this.secondByte = second_Byte;
 	}
 
-	public byte getFirstByte() {
+	public String getFirstByte() {
 		return firstByte;
 	}
 
-	public void setFirstByte(byte firstByte) {
+	public void setFirstByte(String firstByte) {
 		this.firstByte = firstByte;
 	}
 
-	public byte getSecondByte() {
+	public String getSecondByte() {
 		return secondByte;
 	}
 
-	public void setSecondByte(byte secondByte) {
+	public void setSecondByte(String secondByte) {
 		this.secondByte = secondByte;
+	}
+
+	@Override
+	public String toString() {
+		return "instruction [firstByte=" + firstByte + ", secondByte=" + secondByte + "]";
 	}
 
 
