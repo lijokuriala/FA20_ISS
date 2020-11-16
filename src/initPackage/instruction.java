@@ -13,16 +13,8 @@ public class instruction {
 		return firstByte;
 	}
 
-	public void setFirstByte(String firstByte) {
-		this.firstByte = firstByte;
-	}
-
 	public String getSecondByte() {
 		return secondByte;
-	}
-
-	public void setSecondByte(String secondByte) {
-		this.secondByte = secondByte;
 	}
 
 	@Override
