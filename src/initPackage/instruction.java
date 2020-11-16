@@ -4,6 +4,7 @@ public class instruction {
 	private String firstByte;
 	private String secondByte;
 	
+	//Constructor method
 	public instruction(String first_Byte, String second_Byte) {
 		this.firstByte = first_Byte;
 		this.secondByte = second_Byte;
