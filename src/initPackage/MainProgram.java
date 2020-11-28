@@ -32,6 +32,8 @@ public class MainProgram {
 				// System.out.println("Line #" + instructionsCount + " = " + binaryLine);
 				// System.out.println(program[instructionsCount - 1].toString());
 			}
+			// Clear registers
+			clearRegisters();
 			// Run the execution of the Instruction set
 			run_program(instructionsCount);
 
@@ -43,6 +45,22 @@ public class MainProgram {
 	// Generic method to print the register array
 	public static void printRegisterArray() {
 		System.out.println("Register array: " + Arrays.toString(register));
+	}
+	
+	// Alternate method to print the register array in Decimal
+	public static void printRegisterArrayDecimal() {
+		int[] intRegister = new int[8];
+		for(int counter = 0; counter < 8; counter++) {
+			intRegister[counter] =  Integer.parseUnsignedInt(register[counter], 2);
+		}
+		System.out.println("Register array: " + Arrays.toString(intRegister));
+	}
+	
+	//Clear register array
+	public static void clearRegisters() {
+		int counter = 0;
+		while(counter < 8)
+			register[counter++] = "00000000";			
 	}
 
 	public static void run_program(int num_of_instr) {
@@ -112,7 +130,8 @@ public class MainProgram {
 				return;
 			}
 			// Print the register array after each instruction is executed
-			printRegisterArray();
+			//printRegisterArray();
+			printRegisterArrayDecimal();
 		}
 	}
 
